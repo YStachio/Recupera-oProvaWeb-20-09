@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Recuperação de Web</title>
+</head>
+<body>
+    <h1>Recuperação Prova Web</h1>
+    <div class="bloco-numero">
+         <input type="number" min="1" max="10" placeholder="Digite um número">
+    </div>
+        <div class="bloco-adicionar">
+            <button type="button">Adicionar</button>
+        </div>
+            <div class="bloco-remover">
+                <button type="button">Remover</button>
+            </div>
+                <div class="bloco-numeros">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+                    <div class="bloco-erro" style="display: none;">
+                        <p>Número inválido. Digite um número entre 1 e 10.</p>
+                    </div>
+                <script>
+                    const blocoNumero = document.querySelector(".bloco-numero");
+                    const blocoAdicionar = document.querySelector(".bloco-adicionar");
+                    const blocoNumeros = document.querySelector(".bloco-numeros");
+                    const blocoErro = document.querySelector(".bloco-erro");
+                    
+                        blocoAdicionar.addEventListener("click", () => {
+                            const numero = blocoNumero.querySelector("input").value;
+                                if (numero < 1 || numero > 10) {
+                                    blocoErro.style.display = "block";
+                                return;
+                                }
+                        blocoNumeros.querySelector("ul").innerHTML += `<li>${numero}</li>`;
+                        });
+                    blocoNumeros.addEventListener("click", (event) => {
+                        const item = event.target.closest("li");
+                        item.remove();
+                    });
+                </script>
+
+<!--Link com o JS-->
+<script src="prova.js"></script>
+</body>
+</html>
+
+<!--Fontes externas para estilização: https://symbl.cc/pt/html-entities/-->

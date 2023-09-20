@@ -1,0 +1,23 @@
+/* Largura do container de input */
+div .bloco-numero{
+    width: 35%;
+}
+
+/* Corpo centralizado de todo o texto */
+
+style
+.bloco-adicionar > button:nth-child(1) {
+    width: 100vw;
+    height: 100vh;
+    color: #007bff;
+    line-height: normal;
+}
+.bloco-remover > button:nth-child(2) {
+    color: #dc3545;
+    width: 100vw;
+    height: 100vh;
+    line-height: normal;
+  }
+body {
+margin: 0px;
+}
